@@ -27,10 +27,10 @@ public class JogoCenario extends CenarioPadrao {
 
     @Override
     public void carregar() {
-        largBloco = largura / grade.length;
-        altBloco = altura / grade[0].length;
+        largBloco = largura / grade.length; // Largura da grade
+        altBloco = altura / grade[0].length; // Altura da grade
 
-        for(int i = 0; i < grade.length; i++) {
+        for(int i = 0; i < grade.length; i++) { // Percorre a grade
             for(int j = 0; j < grade[0].length; j++) {
                 grade[i][j] = ESPACO_VAZIO;
             }
@@ -41,7 +41,7 @@ public class JogoCenario extends CenarioPadrao {
 
     public void adicionaPeca() {
         ppy = -2; // A peca comeca um pouco acima do topo
-        ppx = grade.length / 2 - 1;
+        ppx = grade.length / 2 - 1; // A peca comeca no meio da grade
 
         // Primeira Chamada
 
@@ -56,8 +56,17 @@ public class JogoCenario extends CenarioPadrao {
         if(idPeca == idPrxPeca){ // Se a peca atual for igual a proxima peca
             idPrxPeca = rand.nextInt(Peca.PECAS.length);
         }
-        peca = Peca.PECAS[idPeca];
-        corPeca = Peca.Cores[idPeca];
+        peca = Peca.PECAS[idPeca]; // Pega a peca atual
+        corPeca = Peca.Cores[idPeca];  // Pega a cor da peca atual
+    }
+
+    private void adicionarPecaNaGrade() {
+        for(int col = 0; col < peca.length; col++) {
+            for() {
+
+            }
+
+        }
     }
 
     @Override
