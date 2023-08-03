@@ -4,6 +4,6 @@ public class Shape {
         TShape, SquareShape, LShape, MirroredLShape
     }
 
-    private Tetriominoe pieceShape;
+    private Tetriomine pieceShape;
     private int[][] coords;
 }
