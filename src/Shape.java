@@ -88,6 +88,8 @@ public class Shape {
         return m;
     }
 
+    //  A função rotateLeft() retorna essa nova instância que representa a
+    //  forma da peça após a rotação. A peça original permanece inalterada.
     Shape rotateLeft() {
         if(pieceShape == Tetrominoe.SquareShape) {
             return this;
@@ -103,6 +105,23 @@ public class Shape {
 
         return result;
     }
+
+    Shape rotateRight() {
+        if(pieceShape = Tetrominoe.SquareShape) {
+            return this;
+        }
+        var result = new Shape();
+        result.pieceShape = pieceShape;
+
+        for(int i = 0; i < 4; i++) {
+            result.setX(i, -y(i));
+            result.setY(i, x(i));
+        }
+
+        return result;
+    }
+
+
 
 
 
