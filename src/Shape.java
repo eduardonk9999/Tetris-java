@@ -1,7 +1,9 @@
+import java.util.Random;
+
 public class Shape {
     protected enum Tetrominoe {
         NoShape, ZShape, SShape, LineShape,
-        TShape, SqyareShape, LShape, MirrorredLShape
+        TShape, SquareShape, LShape, MirrorredLShape
     }
 
     private Tetrominoe pieceShape;
@@ -32,7 +34,7 @@ public class Shape {
     // células individuais da peça. Isso permite que a posição da peça seja
     // atualizada conforme ela se move na grade do jogo.
     private void setX(int index, int x) {
-        coords[idnex][0] = x;
+        coords[index][0] = x;
     }
     private void setY(int index, int  y) {
         coords[index][1] = y;
@@ -54,6 +56,55 @@ public class Shape {
     Tetrominoe getShape() {
         return pieceShape;
     }
+
+    //  é usada para escolher uma peça Tetrominoe aleatoriamente e configurá-la
+    //  como a forma atual da peça a ser utilizada no jogo. Cada vez que esse método é chamado,
+    //  uma peça Tetrominoe diferente pode ser selecionada aleatoriamente para adicionar variedade
+    //  e imprevisibilidade ao jogo Tetris.
+    void setRandomShape() {
+        var r = new Random();
+        int x = Math.abs(r.nextInt()) % 7 + 1;
+
+        Tetrominoe[] values = Tetrominoe.values();
+        setShape(values[x]);
+    }
+
+    //Essa informação pode ser útil para diversas finalidades,
+    // como verificar se a peça está prestes a colidir com uma parede à esquerda
+    public int minX() {
+        int m = coords[0][0];
+        for(int i = 0; i < 4; i++){
+            m = Math.min(m, coords[i][0]);
+        }
+        return m;
+    }
+
+    // verificar se a peça está prestes a colidir com o fundo ou com outras peças no jogo
+    public int minY() {
+        int m = coords[0][1];
+        for(int i = 0; i < 4; i++){
+            m = Math.min(m, coords[i][1]);
+        }
+        return m;
+    }
+
+    Shape rotateLeft() {
+        if(pieceShape == Tetrominoe.SquareShape) {
+            return this;
+        }
+
+        var result = new Shape();
+        result.pieceShape = pieceShape;
+
+        for(int i = 0; i < 4; i++) {
+            result.setX(i, y(i));
+            result.setY(i, -x(i));
+        }
+
+        return result;
+    }
+
+
 
 
     public static void main(String[] args) {
