@@ -1,20 +1,20 @@
 import java.util.Random;
 
 public class Shape {
-    protected enum Tetrominoe {
+    protected enum TetrominoType {
         NoShape, ZShape, SShape, LineShape,
         TShape, SquareShape, LShape, MirrorredLShape
     }
 
-    private Tetrominoe pieceShape;
+    private TetrominoType pieceShape;
     private int[][] coords;
 
     public Shape() {
         coords = new int[4][2];
-        setShape(Tetrominoe.NoShape);
+        setShape(TetrominoType.NoShape);
     }
 
-    void setShape(Tetrominoe shape) {
+    void setShape(TetrominoType shape) {
         int[][][] coordsTable = new int[][][]{
             {{0, 0}, {0, 0}, {0, 0}, {0, 0}},
             {{0, -1}, {0, 0}, {-1, 0}, {-1, 1}},
@@ -51,21 +51,21 @@ public class Shape {
         return coords[index][1];
     }
 
-    // getShape: Retorna o tipo da peça Tetrominoe atualmente configurada, permitindo
+    // getShape: Retorna o tipo da peça TetrominoType atualmente configurada, permitindo
     // que você saiba qual é o formato específico da peça.
-    Tetrominoe getShape() {
+    TetrominoType getShape() {
         return pieceShape;
     }
 
-    //  é usada para escolher uma peça Tetrominoe aleatoriamente e configurá-la
+    //  é usada para escolher uma peça TetrominoType aleatoriamente e configurá-la
     //  como a forma atual da peça a ser utilizada no jogo. Cada vez que esse método é chamado,
-    //  uma peça Tetrominoe diferente pode ser selecionada aleatoriamente para adicionar variedade
+    //  uma peça TetrominoType diferente pode ser selecionada aleatoriamente para adicionar variedade
     //  e imprevisibilidade ao jogo Tetris.
     void setRandomShape() {
         var r = new Random();
         int x = Math.abs(r.nextInt()) % 7 + 1;
 
-        Tetrominoe[] values = Tetrominoe.values();
+        TetrominoType[] values = TetrominoType.values();
         setShape(values[x]);
     }
 
@@ -91,7 +91,7 @@ public class Shape {
     //  A função rotateLeft() retorna essa nova instância que representa a
     //  forma da peça após a rotação. A peça original permanece inalterada.
     Shape rotateLeft() {
-        if(pieceShape == Tetrominoe.SquareShape) {
+        if(pieceShape == TetrominoType.SquareShape) {
             return this;
         }
 
@@ -107,7 +107,7 @@ public class Shape {
     }
 
     Shape rotateRight() {
-        if(pieceShape = Tetrominoe.SquareShape) {
+        if(pieceShape == TetrominoType.SquareShape) {
             return this;
         }
         var result = new Shape();
@@ -119,16 +119,6 @@ public class Shape {
         }
 
         return result;
-    }
-
-
-
-
-
-
-    public static void main(String[] args) {
-        Shape shape = new Shape();
-        shape.setShape(Tetrominoe.NoShape);
     }
 }
 
