@@ -27,4 +27,13 @@ public class Board extends JPanel {
         addKeyListener(new TAdpter());
     }
 
+    // Representa a largura de cada quadrado do tabuleiro
+    private int squareWidth() {
+        return (int) getSize().getWidth() / BOARD_WIDTH;
+    }
+    // Representa a altura de cada quadrado do tabuleiro
+    private int squareHeight() {
+        return (int) getSize().getHeight() / BOARD_HEIGHT;
+    }
+
 }
