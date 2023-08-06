@@ -36,4 +36,12 @@ public class Board extends JPanel {
         return (int) getSize().getHeight() / BOARD_HEIGHT;
     }
 
+    // Em resumo, o método shapeAt é usado para obter a peça (Tetrominoe) localizada
+    // na posição específica (x, y) do tabuleiro do jogo. Ele acessa o array board,
+    // que armazena as peças do jogo, e calcula o índice correto no array com base
+    // nas coordenadas (x, y) fornecidas. O método retorna a peça encontrada nessa posição.
+    private Shape.TetrominoType shepeAt(int x, int y) {
+        return board[(y * BOARD_WIDTH) + X];
+    }
+
 }
