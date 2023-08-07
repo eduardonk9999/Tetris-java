@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 
 public class Board extends JPanel {
@@ -42,6 +43,36 @@ public class Board extends JPanel {
     // nas coordenadas (x, y) fornecidas. O método retorna a peça encontrada nessa posição.
     private Shape.TetrominoType shepeAt(int x, int y) {
         return board[(y * BOARD_WIDTH) + X];
+    }
+
+    void start() {
+        curPiece = new Shape();
+        board = new Shape.TetrominoType[BOARD_WIDTH * BOARD_HEIGHT];
+
+        clearBoard();
+        newPiece();
+
+        timer = new Timer(PERIOD_INTERVAL, new GameCycle());
+        timer.start();
+    }
+
+    private void pause() {
+        isPaused = !isPaused;
+
+        if(isPaused) {
+            statusbar.setText("PAUSED");
+        } else {
+            statusbar.setText(String.valueOf(numLinesRemoved));
+        }
+
+        repaint();
+    }
+
+    // Resumindo desenha em Tela
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        doDreawing(g);
     }
 
 }
