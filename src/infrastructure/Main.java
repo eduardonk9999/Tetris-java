@@ -1,7 +1,10 @@
 package infrastructure;
 
+import ui.Gui;
+
 public class Main {
-    public static void main(string[] args) {
-        
+    public static void main(String[] args) {
+        Gui g = new Gui();
+        g.create();
     }
 }
