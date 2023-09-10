@@ -6,6 +6,7 @@ Com esse projeto pudi aprender conceitos importantes sobre OOP em java e entende
 
 Proximos passos =>
 <p>DIA 1</p>
+
 1. Criar a classe TetrisPiece:
 - [ ] Crie a classe TetrisPiece para representar as peças do jogo Tetris.
 - [ ] Defina as formas das peças (L, T, I, etc.) usando matrizes ou listas de blocos.
