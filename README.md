@@ -43,7 +43,8 @@ Proximos passos =>
 - [ ] Verifique se a próxima peça pode ser colocada no topo do tabuleiro. Se não for possível, o jogo termina.
 
 
-/*Trabalhar depois...*/
+<p>/*Trabalhar depois...*/</p>
+
 10. Atualizar a interface do usuário:
 - [ ] Atualize continuamente o painel para refletir o estado atual do jogo.
 - [ ] Exiba informações como a pontuação e o próximo bloco a cair.
