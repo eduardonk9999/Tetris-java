@@ -5,7 +5,7 @@ I made the classic Tetris game using Java to enhance my understanding of object-
 
 
 Proximos passos =>
-DIA 1
+<p>DIA 1</p>
 1. Criar a classe TetrisPiece:
 - [ ] Crie a classe TetrisPiece para representar as peças do jogo Tetris.
 - [ ] Defina as formas das peças (L, T, I, etc.) usando matrizes ou listas de blocos.
@@ -17,7 +17,7 @@ DIA 1
 3. Adicionar uma peça ao tabuleiro:
 - [ ] Adc uma peça no tabuleiro
 
-DIA 2
+<p>DIA 2</p>
 4. Implementar a queda das peças:
 - [ ] Crie um mecanismo para fazer com que a peça caia automaticamente a cada intervalo de tempo.
 - [ ] Atualize a posição da peça e desenhe-a no painel.
@@ -30,7 +30,7 @@ DIA 2
 - [ ] Verifique se a peça colidiu com outras peças ou com o fundo do tabuleiro.
 - [ ] Se houver uma colisão, pare a queda da peça e adicione os blocos ao tabuleiro.
 
-DIA 3
+<p>DIA 3</p>
 7. Detectar linhas completas:
 - [ ] Após a adição de uma peça ao tabuleiro, verifique se alguma linha foi preenchida por completo.
 - [ ] Remova as linhas completas e atualize o tabuleiro.
