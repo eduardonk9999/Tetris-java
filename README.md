@@ -8,9 +8,9 @@ Proximos passos =>
 <p>DIA 1</p>
 
 1. Criar a classe TetrisPiece:
-- [ ] Crie a classe TetrisPiece para representar as peças do jogo Tetris.
-- [ ] Defina as formas das peças (L, T, I, etc.) usando matrizes ou listas de blocos.
-- [ ] Implemente métodos para mover e girar as peças.
+- [X] Crie a classe TetrisPiece para representar as peças do jogo Tetris.
+- [X] Defina as formas das peças (L, T, I, etc.) usando matrizes ou listas de blocos.
+- [X] Implemente métodos para mover e girar as peças.
 
 2. TetrisBlock:
 - [ ] TetrisBlock aprimorá-la para conter informações como cor e posição.
