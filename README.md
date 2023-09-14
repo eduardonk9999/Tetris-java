@@ -1,7 +1,7 @@
 # Tetris-java EM 3 DIAS
 Com esse projeto pudi aprender conceitos importantes sobre OOP em java e entender melhor como a linguagem se comporta
 
-🚧 Under construction... 🚧
+
 
 
 Proximos passos =>
@@ -19,6 +19,7 @@ Proximos passos =>
 - [ ] Adc uma peça no tabuleiro
 
 <p>DIA 2</p>
+
 4. Implementar a queda das peças:
 - [ ] Crie um mecanismo para fazer com que a peça caia automaticamente a cada intervalo de tempo.
 - [ ] Atualize a posição da peça e desenhe-a no painel.
@@ -32,6 +33,7 @@ Proximos passos =>
 - [ ] Se houver uma colisão, pare a queda da peça e adicione os blocos ao tabuleiro.
 
 <p>DIA 3</p>
+
 7. Detectar linhas completas:
 - [ ] Após a adição de uma peça ao tabuleiro, verifique se alguma linha foi preenchida por completo.
 - [ ] Remova as linhas completas e atualize o tabuleiro.
